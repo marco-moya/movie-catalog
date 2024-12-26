@@ -1,0 +1,14 @@
+footer {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  color: $white-color;
+  & a {
+    color: $third-alpha-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

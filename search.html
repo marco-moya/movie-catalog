@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+  <title>Movies Track</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header__title">
+      <div class="header__logo"><i class="fa-solid fa-ticket-simple"></i></div>
+      <h1>Movies Track</h1>
+    </div>
+    <nav>
+      <ul class="mobile">
+        <li class="home"><i class="fa-solid fa-house"></i></li>
+        <li class="search"><i class="fa-solid fa-magnifying-glass"></i></li>
+      </ul>
+      <ul class="desktop">
+        <li class="home">Home</li>
+        <li class="search">Search</li>
+      </ul>
+    </nav>
+    <section class="modal">
+      <button type="button" class="btn-goOut"><i class="fa-solid fa-arrow-left"></i></button>
+      <article class="searching">
+        <input type="search" placeholder="Buscar..." id="query">
+        <button type="button" id="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </article>
+    </section>
+  </header>
+  <main id="search-page">
+    <h2 class="search__title"></h2>
+    <section class="search__container">
+      <ul class="search__movie-list"></ul>
+    </section>
+    <button type="button" class="btn-goBack"><i class="fa-solid fa-chevron-left"></i></button>
+    <button type="button" class="btn-arrowUp btn-arrowUp--hide"><i class="fa-solid fa-arrow-up"></i></button>
+  </main>
+  <template id="template-search">
+    <li>
+      <img src="" alt="">
+    </li>
+  </template>
+  <footer>
+    <p><small>Versión 1.1</small></p>
+    <p><small>Hecho con <em><a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">The Movie DB API</a></em></small></p>
+  </footer>
+  <script src="https://kit.fontawesome.com/aaed170742.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./js/main.js" type="module"></script>
+</body>
+</html>

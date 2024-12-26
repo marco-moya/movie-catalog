@@ -1,0 +1,26 @@
+.btn-goBack,
+.btn-arrowUp {
+  width: 50px;
+  height: auto;
+  font-size: 2rem;
+  color: $third-alpha-color;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  cursor: pointer;
+}
+
+.btn-goBack{
+  top: 1rem;
+  left: 0.5rem;
+}
+
+.btn-arrowUp {
+  right: 0.5rem;
+  bottom: 8rem;
+}
+
+.btn-arrowUp--hide {
+  opacity: 0;
+  visibility: hidden;
+}

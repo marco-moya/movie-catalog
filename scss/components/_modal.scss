@@ -1,0 +1,61 @@
+.modal {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: $dark-alpha-color;
+  transform: translateY(-100vh);
+  animation: transform 1s ease-in-out;
+  & .btn-goOut {
+    width: 50px;
+    height: auto;
+    font-size: 2rem;
+    color: $white-color;
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    top: 1rem;
+    left: 0.5rem;
+  }
+  & .btn-goOut:hover {
+    cursor: pointer;
+    color: $third-color;
+  }
+}
+
+.searching {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  @include flexbox(center, center, 0);
+  position: relative;
+  top: 5rem;
+  & input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-family: $font-family-poppins;
+  }
+  & button {
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    color: $white-color;
+    background-color: $second-color;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    @include flexbox(center, center, 0);
+    cursor: pointer;
+    &:hover {
+      color: $third-color;
+    }
+  }
+}

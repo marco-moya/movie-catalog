@@ -1,0 +1,35 @@
+$first-color: rgb(34, 40, 49);
+$first-alpha-color: rgba(34, 40, 49, 0.75);
+$second-color: rgb(57, 62, 70);
+$second-alpha-color: rgba(57, 62, 70, 0.75);
+$third-color: rgb(255, 211, 105);
+$third-alpha-color: rgba(255, 211, 105, 0.75);
+$white-color: #fff;
+$gray-light-color: #f3f3f3;
+$gray-color: #ccc;
+$gray-dark-color: #666;
+$dark-color: #000;
+$link-color: #EEEEEE;
+$title-color: #333;
+$text-color: #222;
+$white-alpha-color: rgba(255, 255, 255, 0.5);
+$dark-alpha-color: rgba(0, 0, 0, 0.5);
+
+$font-family-poppins: "Poppins", sans-serif;
+
+/* Step -2: 11.1111px → 10.24px */
+$step--2: clamp(0.64rem, 0.71rem + -0.0778vw, 0.6944rem);
+/* Step -1: 13.3333px → 12.8px */
+$step--1: clamp(0.8rem, 0.8429rem + -0.0476vw, 0.8333rem);
+/* Step 0: 16px → 16px */
+$step-0: clamp(1rem, 1rem + 0vw, 1rem);
+/* Step 1: 19.2px → 20px */
+$step-1: clamp(1.2rem, 1.1857rem + 0.0714vw, 1.25rem);
+/* Step 2: 23.04px → 25px */
+$step-2: clamp(1.44rem, 1.405rem + 0.175vw, 1.5625rem);
+/* Step 3: 27.648px → 31.25px */
+$step-3: clamp(1.728rem, 1.6637rem + 0.3216vw, 1.9531rem);
+/* Step 4: 33.1776px → 39.0625px */
+$step-4: clamp(2.0736rem, 1.9685rem + 0.5254vw, 2.4414rem);
+/* Step 5: 39.8131px → 48.8281px */
+$step-5: clamp(2.4883rem, 2.3273rem + 0.8049vw, 3.0518rem);

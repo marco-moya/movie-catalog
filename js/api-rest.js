@@ -22,8 +22,9 @@ function createMovies(template, data, node) {
       location.href = `movie.html?movieId=${param}`;
     })
     $fragment.appendChild(clone); // Añadir el clon al fragmento
-    d.querySelector(node).appendChild($fragment); // Finalmente agregar el fragmento al DOM
   });
+  d.querySelector(node).innerHTML = ""; // Limpiar el nodo
+  d.querySelector(node).appendChild($fragment); // Finalmente agregar el fragmento al DOM
 }
 
 function createMovieGenres(genres) {
@@ -37,6 +38,7 @@ function createMovieGenres(genres) {
     })
     $fragment.appendChild($li);
   });
+  d.querySelector(".genres__list").innerHTML = "";
   d.querySelector(".genres__list").appendChild($fragment);
 }
 
@@ -153,6 +155,12 @@ export async function getMovieById(id) {
         id
       }
     });
+    d.querySelector(".movie__poster-container").classList.remove("skeleton-movie");
+    d.querySelector(".movie__title").classList.remove("skeleton-title");
+    d.querySelector(".movie__release-date").classList.remove("skeleton-release-date");
+    d.querySelector(".movie__runtime").classList.remove("skeleton-runtime");
+    d.querySelector(".movie__vote-average").classList.remove("skeleton-vote-average");
+    d.querySelector(".movie__overview").classList.remove("skeleton-overview");
     d.querySelector(".movie__backdrop").setAttribute("src", `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`);
     d.querySelector(".movie__backdrop").setAttribute("alt", `${movie.title}`);
     d.querySelector(".movie__poster").setAttribute("src", `https://image.tmdb.org/t/p/w300/${movie.poster_path}`);

@@ -10,14 +10,31 @@ window.addEventListener("DOMContentLoaded", navigator, false);
 window.addEventListener("HashChange", navigator, false);
 function navigator() {
   if (location.pathname.startsWith("/movie.html")) {
+    loadingSkeleton(".genres__list", "skeleton-genres", 4);
+    loadingSkeleton(".carousel__movie-list", "skeleton-genres", 20);
     moviePage();
   } else if (location.pathname.startsWith("/genre.html")) {
+    loadingSkeleton(".genre__movie-list", "skeleton-genres", 20);
     genrePage();
   } else if (location.pathname.startsWith("/search.html")) {
+    loadingSkeleton(".search__movie-list", "skeleton-search", 20);
     searchPage();
   } else {
+    loadingSkeleton(".carousel__movie-list", "skeleton-carousel", 20);
+    loadingSkeleton(".genres__list", "skeleton-genres", 19);
     homePage();
   }
+}
+
+function loadingSkeleton(node, template, limit) {
+  const $template = d.getElementById(template).content;
+  const $fragment = d.createDocumentFragment();
+  for (let i = 0; i < limit; i++) {
+    $template.querySelector("li").classList.add("skeleton");
+    const $clone = d.importNode($template, true);
+    $fragment.appendChild($clone);
+  }
+  d.querySelector(node).appendChild($fragment);
 }
 
 function homePage() {
@@ -100,3 +117,7 @@ d.addEventListener("keyup", e => {
     }
   }
 })
+
+window.addEventListener('beforeunload', () => {
+  d.body.style.overflow = '';
+});

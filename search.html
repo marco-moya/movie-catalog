@@ -37,16 +37,22 @@
   <main id="search-page">
     <h2 class="search__title"></h2>
     <section class="search__container">
-      <ul class="search__movie-list"></ul>
+      <ul class="search__movie-list">
+        <template id="skeleton-search">
+          <li>
+            <img src="" alt="">
+          </li>
+        </template>
+        <template id="template-search">
+          <li>
+            <img src="" alt="">
+          </li>
+        </template>
+      </ul>
     </section>
     <button type="button" class="btn-goBack"><i class="fa-solid fa-chevron-left"></i></button>
     <button type="button" class="btn-arrowUp btn-arrowUp--hide"><i class="fa-solid fa-arrow-up"></i></button>
   </main>
-  <template id="template-search">
-    <li>
-      <img src="" alt="">
-    </li>
-  </template>
   <footer>
     <p><small>Versión 1.1</small></p>
     <p><small>Hecho con <em><a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">The Movie DB API</a></em></small></p>

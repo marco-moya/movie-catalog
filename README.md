@@ -11,3 +11,4 @@ Catálogo y buscador de películas. Muestra películas en tendencia o por géner
 
 - [GitHub](https://github.com/marco-moya/movie-catalog) 
 - [GitHub Pages](https://marco-moya.github.io/movie-catalog) 
+- [Netlify](https://moviestrack.netlify.app/genre.html?genre=35-Comedia)

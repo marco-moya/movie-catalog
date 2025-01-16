@@ -25,14 +25,17 @@
   width: 2000%;
   @include flexbox(start, center, 0);
   transition: transform 0.5s ease-in-out;
+  touch-action: none;
   & li {
     width: 300px;
+    height: 450px;
     margin: 0 auto;
     cursor: pointer;
   }
 }
 
 .carousel__indicators {
+  min-width: 150px;
   @include flexbox(center, center, 0);
 }
 
@@ -51,7 +54,10 @@
 }
 
 .carousel__indicators button.active {
+  width: 16px;
+  border-radius: 10px;
   background-color: $third-alpha-color;
+  transition: all 0.3s ease;
 }
 
 .carousel__indicators button.hidden {

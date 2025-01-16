@@ -37,22 +37,35 @@
   <main id="home-page">
     <section class="carousel_container">
       <article class="carousel__trending">
-        <ul class="carousel__movie-list"></ul>
+        <ul class="carousel__movie-list">
+          <template id="skeleton-carousel">
+            <li>
+              <img src="" alt="">
+            </li>
+          </template>
+          <template id="template-carousel">
+            <li>
+              <img src="" alt="">
+            </li>
+          </template>
+        </ul>
       </article>
       <button type="button" class="btn-prev"><i class="fa-solid fa-chevron-left"></i></button> <!-- Botón anterior -->
       <button type="button" class="btn-next"><i class="fa-solid fa-chevron-right"></i></button> <!-- Botón siguiente -->
     </section>
     <div class="carousel__indicators"></div> <!-- Indicadores de puntos -->
     <section class="genres">
-      <ul class="genres__list"></ul>
+      <ul class="genres__list">
+        <template id="skeleton-genres">
+          <li>
+            <img src="" alt="">
+          </li>
+        </template>
+      </ul>
     </section>
     <button type="button" class="btn-arrowUp btn-arrowUp--hide"><i class="fa-solid fa-arrow-up"></i></button>
   </main>
-  <template id="template-carousel">
-    <li>
-      <img src="" alt="">
-    </li>
-  </template>
+ 
   <footer>
     <p><small>Versión 1.1</small></p>
     <p><small>Hecho con <em><a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">The Movie DB API</a></em></small></p>
